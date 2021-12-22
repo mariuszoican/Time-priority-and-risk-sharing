@@ -1,0 +1,40 @@
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, Dec 21, 2021 - 7:17:28 PM
+\begin{table}[!htbp] \centering 
+  \caption{Time priority seqeuence and market depth} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{5}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-6} 
+\\[-1.8ex] & \multicolumn{5}{c}{Market-maker quoted depth (contracts) on book side} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5)\\ 
+\hline \\[-1.8ex] 
+ $\hat{\rho}(\text{queue, inventory}) \times d_{\text{side}}$ & $-$0.209$^{*}$ & 0.026 & 0.025 & 0.056 &  \\ 
+  & t = $-$2.347 & t = 0.247 & t = 0.235 & t = 0.542 &  \\ 
+  $\hat{\rho}(\text{queue, inventory}) \times d_{\text{ask}}$ &  &  &  &  & $-$0.460 \\ 
+  &  &  &  &  & t = $-$0.555 \\ 
+  $\hat{\rho}(\text{queue, inventory}) \times d_{\text{bid}}$ &  &  &  &  & $-$0.578 \\ 
+  &  &  &  &  & t = $-$0.624 \\ 
+  queue size &  & 1.006$^{***}$ & 1.006$^{***}$ & 0.976$^{***}$ & 0.976$^{***}$ \\ 
+  &  & t = 34.203 & t = 34.219 & t = 38.216 & t = 39.141 \\ 
+  order imbalance &  &  & $-$0.0001 & $-$0.001 & $-$0.001 \\ 
+  &  &  & t = $-$0.123 & t = $-$0.501 & t = $-$0.530 \\ 
+  quoted spread (bps) &  &  &  & 8.265$^{***}$ & 8.271$^{***}$ \\ 
+  &  &  &  & t = 7.837 & t = 7.889 \\ 
+  aggregate inventory (x 100) &  &  &  & $-$0.445$^{***}$ & $-$0.444$^{***}$ \\ 
+  &  &  &  & t = $-$11.629 & t = $-$12.141 \\ 
+ \hline \\[-1.8ex] 
+Symbol FE & Yes & Yes & Yes & Yes & Yes \\ 
+Date FE & Yes & Yes & Yes & Yes & Yes \\ 
+Observations & 33,946 & 33,946 & 33,946 & 33,946 & 33,946 \\ 
+R$^{2}$ & 0.090 & 0.465 & 0.465 & 0.485 & 0.485 \\ 
+Adjusted R$^{2}$ & 0.090 & 0.465 & 0.465 & 0.484 & 0.485 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{5}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{5}{r}{Standard errors clustered at symbol, date, and timestamp level} \\ 
+\end{tabular} 
+\end{table} 

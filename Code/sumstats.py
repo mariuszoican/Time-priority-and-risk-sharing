@@ -176,9 +176,3 @@ ax.set_xticklabels(['Low','2','3','4','High'])
 plt.tight_layout(pad=5.0)
 
 plt.savefig('../Output/inventory_concerns.png',bbox_inches='tight')
-
-# size_diff_nc=size_diff_nc.fillna(0)
-# size_diff_nc['quote_side']=np.where(((size_diff_nc['ask']==0) & (size_diff_nc['bid']>0)),"bid only",
-#                                     np.where(((size_diff_nc['ask']>0) & (size_diff_nc['bid']==0)),
-#                                              'ask only','both'))
-# counts=size_diff_nc.groupby(['quantile_inventory_nc','quote_side']).count()['externalSymbol']

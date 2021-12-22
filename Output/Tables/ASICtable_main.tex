@@ -1,0 +1,43 @@
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, Dec 21, 2021 - 6:09:17 PM
+\begin{table}[!htbp] \centering 
+  \caption{Impact of queue size and trader inventory on marginal quotes (3-way standardized)} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{5}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-6} 
+\\[-1.8ex] & \multicolumn{5}{c}{Marginal quote size} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5)\\ 
+\hline \\[-1.8ex] 
+ $d_{\text{ask}}$ & 1.242$^{***}$ & 1.242$^{***}$ & 1.296$^{***}$ & 1.394$^{***}$ & 1.963$^{***}$ \\ 
+  & t = 4.244 & t = 4.244 & t = 4.498 & t = 4.989 & t = 5.834 \\ 
+  quoted spread $\times d_{\text{ask}}$  & 0.0001 & 0.0001 & 0.002$^{*}$ &  & 0.0001 \\ 
+  & t = 0.902 & t = 0.902 & t = 1.949 &  & t = 0.954 \\ 
+  queue ahead $\times d_{\text{side}}$  & $-$0.376$^{***}$ & $-$0.376$^{***}$ & $-$0.367$^{***}$ & $-$0.350$^{***}$ &  \\ 
+  & t = $-$7.449 & t = $-$7.450 & t = $-$7.571 & t = $-$7.760 &  \\ 
+  order priority $\times d_{\text{side}}$  &  &  &  &  & $-$0.112$^{***}$ \\ 
+  &  &  &  &  & t = $-$5.269 \\ 
+  Inventory & $-$0.022$^{*}$ & $-$0.022$^{*}$ & $-$0.023$^{*}$ & $-$0.022$^{*}$ & $-$0.024$^{**}$ \\ 
+  & t = $-$2.272 & t = $-$2.278 & t = $-$2.357 & t = $-$2.221 & t = $-$2.564 \\ 
+  queue length & 0.089$^{***}$ & 0.089$^{***}$ & 0.087$^{***}$ & 0.084$^{***}$ & 0.144$^{***}$ \\ 
+  & t = 5.465 & t = 5.470 & t = 5.491 & t = 5.555 & t = 5.502 \\ 
+  book depth $\times d_{\text{side}}$ & 0.145 & 0.145 &  &  & 0.051 \\ 
+  & t = 1.877 & t = 1.877 &  &  & t = 0.739 \\ 
+  order imbalance $\times d_{\text{side}}$ & 0.002 &  &  &  &  \\ 
+  & t = 0.606 &  &  &  &  \\ 
+ \hline \\[-1.8ex] 
+Symbol FE & Yes & Yes & Yes & Yes & Yes \\ 
+Date FE & Yes & Yes & Yes & Yes & Yes \\ 
+Trader FE & Yes & Yes & Yes & Yes & Yes \\ 
+Observations & 760,725 & 760,725 & 760,725 & 760,725 & 760,725 \\ 
+R$^{2}$ & 0.500 & 0.500 & 0.499 & 0.498 & 0.524 \\ 
+Adjusted R$^{2}$ & 0.500 & 0.500 & 0.499 & 0.497 & 0.524 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{5}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{5}{r}{Standard errors clustered at symbol, date, and trader level.} \\ 
+\end{tabular} 
+\end{table} 

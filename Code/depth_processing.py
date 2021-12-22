@@ -9,7 +9,6 @@ import statsmodels.api as sm
 from linearmodels.panel import PanelOLS
 import matplotlib.gridspec as gridspec
 
-
 def settings_plot(ax):
     for label in ax.get_xticklabels():
         label.set_fontproperties(ticks_font)
@@ -21,6 +20,8 @@ def settings_plot(ax):
 
 sizeOfFont=18
 ticks_font = font_manager.FontProperties(size=sizeOfFont)
+
+gg
 
 quotedata=pd.read_csv('../ProcessedData/mquotes_ZF_mm.csv', index_col=0)
 quotedata=quotedata.dropna()
@@ -78,13 +79,13 @@ regdata_ss['rho_dside']=regdata_ss['rho_corrcoef_spearman']*regdata_ss['dside']
 model=PanelOLS.from_formula('Depth_Side_MM~1+rho_dside+'
                            'priority_levels+OrderImbalance+QSpread_bps+'
                            'EntityEffects+TimeEffects',
-                          data=regdata_ss).fit(cov_type='clustered',clustered_entity=False,clustered_time=False)
+                          data=regdata_ss).fit(cov_type='clustered')
 
 
 reg=PanelOLS.from_formula('Depth_Side_MM~1+'
                            'priority_levels+OrderImbalance+QSpread_bps+'
                            'EntityEffects+TimeEffects',
-                          data=regdata_ss).fit(cov_type='clustered',clustered_entity=False,clustered_time=False)
+                          data=regdata_ss).fit(cov_type='clustered')
 regdata_ss['depth_resid']=reg.resids
 
 
@@ -98,7 +99,7 @@ fig=plt.figure(facecolor='white',figsize=sizefigs_L)
 ax=fig.add_subplot(gs[0, :])
 ax=settings_plot(ax)
 
-sns.histplot(x='rho_corrcoef_spearman',data=regdata_ss,stat='probability',element='step',fill=True,hue='side',
+sns.histplot(x='rho_corrcoef_spearman',data=regdata_ss.reset_index(drop=True),stat='probability',element='step',fill=True,hue='side',
              shrink=True)
 plt.xlabel("Correlation between inventory and queue position",fontsize=18)
 plt.ylabel("Probability",fontsize=18)
@@ -142,7 +143,8 @@ fig=plt.figure(facecolor='white',figsize=sizefigs_L)
 ax=fig.add_subplot(gs[0, 0])
 ax=settings_plot(ax)
 
-sns.histplot(x='rho_corrcoef_spearman',data=regdata_ss,stat='probability',element='step',fill=True,hue='side',
+sns.histplot(x='rho_corrcoef_spearman',data=regdata_ss.reset_index(drop=True),stat='probability',element='step',
+             fill=True,hue='side',
              shrink=True)
 plt.xlabel("Correlation between inventory and queue position",fontsize=18)
 plt.ylabel("Probability",fontsize=18)

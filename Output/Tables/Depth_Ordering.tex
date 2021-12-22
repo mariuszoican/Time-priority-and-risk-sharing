@@ -1,0 +1,37 @@
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, Dec 21, 2021 - 6:10:29 PM
+\begin{table}[!htbp] \centering 
+  \caption{Time priority and marginal impact of inventory on depth } 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-7} 
+\\[-1.8ex] & \multicolumn{6}{c}{Market-maker quoted depth} \\ 
+ & \multicolumn{3}{c}{Ask side} & \multicolumn{3}{c}{Bid side} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+\hline \\[-1.8ex] 
+ Inventory: Priority \#1 & 0.048 & 0.056 & 0.039 & 0.090 & 0.086 & 0.077 \\ 
+  & t = 0.615 & t = 0.739 & t = 0.563 & t = 1.024 & t = 0.967 & t = 0.853 \\ 
+  Inventory: Priority \#2 & $-$0.014 & $-$0.009 & $-$0.007 & 0.027 & 0.032 & 0.011 \\ 
+  & t = $-$0.188 & t = $-$0.121 & t = $-$0.101 & t = 0.318 & t = 0.390 & t = 0.154 \\ 
+  Inventory: Priority \#3 & 0.076 & 0.073 & 0.085 & 0.019 & 0.022 & 0.015 \\ 
+  & t = 1.082 & t = 1.116 & t = 1.180 & t = 0.287 & t = 0.332 & t = 0.238 \\ 
+  quoted spread (bps) &  & 2.606$^{***}$ & 3.216$^{***}$ &  & 2.672$^{***}$ & 3.267$^{***}$ \\ 
+  &  & t = 5.057 & t = 5.184 &  & t = 5.201 & t = 5.265 \\ 
+  order imbalance &  &  & 0.025$^{**}$ &  &  & $-$0.024$^{**}$ \\ 
+  &  &  & t = 2.720 &  &  & t = $-$3.323 \\ 
+ \hline \\[-1.8ex] 
+Symbol FE & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Date FE & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+Observations & 43,663 & 43,663 & 43,663 & 44,121 & 44,121 & 44,121 \\ 
+R$^{2}$ & 0.190 & 0.203 & 0.253 & 0.193 & 0.207 & 0.254 \\ 
+Adjusted R$^{2}$ & 0.189 & 0.202 & 0.252 & 0.193 & 0.207 & 0.254 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{6}{r}{Standard errors clustered at symbol, date, and timestamp level} \\ 
+\end{tabular} 
+\end{table} 
